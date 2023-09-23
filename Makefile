@@ -49,6 +49,9 @@ SRCS        :=      src/main.c \
 					src/utils.c \
 					src/checkers.c \
 					src/processes.c \
+					src/process_by_size.c \
+					src/indexing.c \
+
                           
 OBJS        := $(SRCS:.c=.o)
 
