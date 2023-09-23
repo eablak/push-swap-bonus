@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:48:06 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 16:04:38 by eablak           ###   ########.fr       */
+/*   Updated: 2023/09/23 16:06:37 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,17 +42,6 @@ void indexing(int *arr, int size, t_struct **struct_a)
     t_struct *keep;
 
     keep = (*struct_a);
-    // for(int i = 0; i < size; i++){
-    //     printf("%d\t",arr[i]);
-    // }
-    // printf("\n");
-    
-    // while((*struct_a) != NULL){
-    //     printf("%d\n",(*struct_a)->data);
-    //     (*struct_a) = (*struct_a)->next;
-    // }    
-    
-    
     int i;
 
     i = 0;

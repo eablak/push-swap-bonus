@@ -51,6 +51,9 @@ SRCS        :=      src/main.c \
 					src/processes.c \
 					src/process_by_size.c \
 					src/indexing.c \
+					src/swap.c \
+					src/reverse.c \
+					src/reverse_rotate.c \
 
                           
 OBJS        := $(SRCS:.c=.o)

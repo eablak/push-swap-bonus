@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:20:53 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 15:52:02 by eablak           ###   ########.fr       */
+/*   Updated: 2023/09/23 16:16:44 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,9 @@ void check_sorted(int *arr, int size);
 void start_processes(int *arr, int size);
 void process_by_size(int size, t_struct **struct_a);
 void indexing(int *arr, int size, t_struct **struct_a);
+void	ra(t_struct **stack_a);
+void	sa(t_struct **stack_a);
+t_struct	*get_last(t_struct *stack_a);
+void	rra(t_struct **stack_a);
 
 #endif
