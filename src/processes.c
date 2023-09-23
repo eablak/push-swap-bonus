@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:49:20 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 16:06:26 by eablak           ###   ########.fr       */
+/*   Updated: 2023/09/23 16:19:08 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,11 +65,11 @@ t_struct *build_struct(int *arr, int size)
 
 void start_processes(int *arr, int size)
 {
-
 	t_struct *struct_a;
 	struct_a = build_struct(arr, size);
 	if (struct_a == NULL)
 		return;
 	indexing(arr, size, &struct_a);
 	process_by_size(size, &struct_a);
+	// a yı freele
 }

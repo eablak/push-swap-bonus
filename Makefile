@@ -54,6 +54,8 @@ SRCS        :=      src/main.c \
 					src/swap.c \
 					src/reverse.c \
 					src/reverse_rotate.c \
+					src/big_sort.c \
+					src/push.c \
 
                           
 OBJS        := $(SRCS:.c=.o)
