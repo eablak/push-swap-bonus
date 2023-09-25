@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void	rewerse(t_struct **stack)
+void	reverse(t_struct **stack)
 {
 	t_struct	*head;
 	t_struct	*root;
@@ -26,19 +26,19 @@ void	rewerse(t_struct **stack)
 
 void	ra(t_struct **stack_a)
 {
-	rewerse(stack_a);
+	reverse(stack_a);
 	write(1, "ra\n", 3);
 }
 
 void	rb(t_struct **stack_b)
 {
-	rewerse(stack_b);
+	reverse(stack_b);
 	write(1, "rb\n", 3);
 }
 
 void	rr(t_struct **stack_a, t_struct **stack_b)
 {
-	rewerse(stack_b);
-	rewerse(stack_a);
+	reverse(stack_b);
+	reverse(stack_a);
 	write(1, "rr\n", 3);
 }

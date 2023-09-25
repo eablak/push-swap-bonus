@@ -12,14 +12,7 @@
 
 #include "../push_swap.h"
 
-t_struct	*get_last_before(t_struct *stack)
-{
-	while (stack && stack->next != NULL && stack->next->next != NULL)
-		stack = stack->next;
-	return (stack);
-}
-
-void	rrewerse(t_struct **stack)
+void	rreverse(t_struct **stack)
 {
 	t_struct	*tmp;
 	t_struct	*tail;
@@ -35,19 +28,19 @@ void	rrewerse(t_struct **stack)
 
 void	rra(t_struct **stack_a)
 {
-	rrewerse(stack_a);
+	rreverse(stack_a);
 	write(1, "rra\n", 4);
 }
 
 void	rrb(t_struct **stack_b)
 {
-	rrewerse(stack_b);
+	rreverse(stack_b);
 	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_struct **stack_a, t_struct **stack_b)
 {
-	rrewerse(stack_a);
-	rrewerse(stack_b);
+	rreverse(stack_a);
+	rreverse(stack_b);
 	write(1, "rrr\n", 4);
 }

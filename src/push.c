@@ -12,7 +12,7 @@
 
 #include "../push_swap.h"
 
-void	switchh(t_struct **stack1, t_struct **stack2)
+void	_send(t_struct **stack1, t_struct **stack2)
 {
 	t_struct	*tmp;
 
@@ -24,12 +24,12 @@ void	switchh(t_struct **stack1, t_struct **stack2)
 
 void	pa(t_struct **stack_a, t_struct **stack_b)
 {
-	switchh(stack_b, stack_a);
+	_send(stack_b, stack_a);
 	write(1, "pa\n", 3);
 }
 
 void	pb(t_struct **stack_a, t_struct **stack_b)
 {
-	switchh(stack_a, stack_b);
+	_send(stack_a, stack_b);
 	write(1, "pb\n", 3);
 }

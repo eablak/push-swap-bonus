@@ -46,5 +46,5 @@ void process_by_size(int size, t_struct **struct_a){
         little_sort(struct_a);
     else
         big_sort(struct_a, size);
-
+	//struct a nın tüm malloclarını freele
 }

@@ -21,6 +21,12 @@ t_struct	*get_last(t_struct *stack_a)
 	return (stack_a);
 }
 
+t_struct	*get_last_before(t_struct *stack)
+{
+	while (stack && stack->next != NULL && stack->next->next != NULL)
+		stack = stack->next;
+	return (stack);
+}
 
 void	array_control(char *all_array)
 {
