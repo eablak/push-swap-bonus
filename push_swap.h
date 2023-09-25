@@ -20,6 +20,8 @@ typedef struct s_struct
 {
     int data;
     int index;
+    int current_pos;
+    int target_pos;
     struct s_struct *next;
 } t_struct;
 
@@ -38,5 +40,8 @@ void big_sort(t_struct **struct_a, int size);
 void	pb(t_struct **stack_a, t_struct **stack_b);
 t_struct	*get_last_before(t_struct *stack);
 int get_size_struct(t_struct **strc);
+void	little_sort(t_struct **stack_a);
+void current_positions(t_struct **strc);
+void target_positions(t_struct **struct_a,t_struct **struct_b);
 
 #endif

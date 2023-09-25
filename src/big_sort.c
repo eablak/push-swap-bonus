@@ -58,22 +58,11 @@ void big_sort(t_struct **struct_a, int size){
 	if (size > 6)
     	sendB_first(struct_a,&struct_b,size);
 	sendB_second(struct_a,&struct_b,size);
-
-	int i = 0;
-	int sizeA = get_size_struct(struct_a);
-	int sizeB = get_size_struct(&struct_b);
-
-	printf("A değerleri \n");
-	while(i < sizeA){
-		printf("%d\n",(*struct_a)->data);
-		(*struct_a) = (*struct_a)->next;
-		i++;
-	}
-	i = 0;
-	printf("\nB değerleri \n");
-	while(i < sizeB){
-		printf("%d\n",(struct_b)->data);
-		(struct_b) = (struct_b)->next;
-		i++;
+	little_sort(struct_a);
+	while(struct_b){
+		current_positions(struct_a);
+		current_positions(&struct_b);
+		target_positions(struct_a,&struct_b);
+		getchar();
 	}
 }

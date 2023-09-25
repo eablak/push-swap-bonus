@@ -21,6 +21,8 @@ t_struct *create_struct(int i)
 		return (0);
 	new_struct->data = i;
 	new_struct->index = 0;
+	new_struct->current_pos = 0;
+	new_struct->target_pos = 0;
 	new_struct->next = NULL;
 	return (new_struct);
 }
@@ -51,6 +53,8 @@ t_struct *build_struct(int *arr, int size)
 		return NULL;
 	begin = struct_a;
 	struct_a->data = arr[0];
+	struct_a->current_pos = 0;
+	struct_a->target_pos = 0;
 	struct_a->next = NULL;
 	i = 1;
 	while (i < size)
