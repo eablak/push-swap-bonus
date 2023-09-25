@@ -12,6 +12,21 @@
 
 #include "../push_swap.h"
 
+int	is_sorted(t_struct *strc)
+{
+	t_struct	*tmp;
+
+	tmp = strc;
+	while (tmp && tmp->next != NULL)
+	{
+		if (tmp->next->data < tmp->data)
+			return (0);
+		tmp = tmp->next;
+	}
+	return (1);
+}
+
+
 int get_size_struct(t_struct **strc){
 	
 	int i;

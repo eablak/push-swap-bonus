@@ -22,6 +22,7 @@ typedef struct s_struct
     int index;
     int current_pos;
     int target_pos;
+    int _const;
     struct s_struct *next;
 } t_struct;
 
@@ -43,5 +44,6 @@ int get_size_struct(t_struct **strc);
 void	little_sort(t_struct **stack_a);
 void current_positions(t_struct **strc);
 void target_positions(t_struct **struct_a,t_struct **struct_b);
-
+void calculate_const(t_struct **struct_a,t_struct **struct_b);
+int	is_sorted(t_struct *strc);
 #endif

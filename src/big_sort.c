@@ -53,16 +53,30 @@ void sendB_second(t_struct **struct_a, t_struct **struct_b, int size){
 
 void big_sort(t_struct **struct_a, int size){
     t_struct *struct_b;
+    t_struct *keep_b;
 
     struct_b = NULL;
 	if (size > 6)
     	sendB_first(struct_a,&struct_b,size);
 	sendB_second(struct_a,&struct_b,size);
-	little_sort(struct_a);
-	while(struct_b){
-		current_positions(struct_a);
+	if (!is_sorted(*struct_a))
+		little_sort(struct_a);
+	keep_b = struct_b;
+
+	// while(struct_b){
+		// current_positions(struct_a);
 		current_positions(&struct_b);
 		target_positions(struct_a,&struct_b);
-		getchar();
-	}
+		calculate_const(struct_a,&struct_b);
+		// struct_b = struct_b->next;
+	// }
+	
+	struct_b = keep_b;
+
+	// while(struct_b){
+	// 	printf("sayi: %d\tmaliyet: %d\n",struct_b->data,struct_b->_const);
+	// 	struct_b = struct_b->next;
+	// }
+	// struct_b = keep_b;
+
 }

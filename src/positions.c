@@ -1,5 +1,6 @@
 #include "../push_swap.h"
 
+//b'den ayrılma maliyeti
 void current_positions(t_struct **strc){
     
     t_struct *keep;
@@ -7,19 +8,21 @@ void current_positions(t_struct **strc){
     int i;
 
     size = get_size_struct(strc);
+    printf("%d\n",size);
     keep = (*strc);
     i = 0;
     while(i < size){
         if (i < (size / 2))
             (*strc)->current_pos = i;
         else
-            (*strc)->current_pos = size - i - 1;
+            (*strc)->current_pos = size - i;
         (*strc) = (*strc)->next;
         i++;
     }
     (*strc) = keep;
 }
 
+//a da yerleşme maliyeti
 void target_positions(t_struct **struct_a,t_struct **struct_b){
 
     t_struct *keep_b;
@@ -29,16 +32,15 @@ void target_positions(t_struct **struct_a,t_struct **struct_b){
     keep_b = *struct_b;
     keep_a = *struct_a;
     i = 0;
-    while(struct_b){
-
+    while(*struct_b){
         i = 0;
         (*struct_a) = keep_a;
-        while(struct_a){
+        while(*struct_a){
             if ((*struct_b)->data < (*struct_a)->data){
                 if (i < (get_size_struct(struct_a) / 2))
                     (*struct_b)->target_pos = i;
                 else
-                    (*struct_b)->target_pos = (i / 2);
+                    (*struct_b)->target_pos = get_size_struct(struct_a) - i;
                 break;
             }
             i++;
@@ -48,4 +50,18 @@ void target_positions(t_struct **struct_a,t_struct **struct_b){
     }
     (*struct_b) = keep_b;
     (*struct_a) = keep_a;
+}
+
+void calculate_const(t_struct **struct_a,t_struct **struct_b){
+    t_struct *keep_b;
+    keep_b = *struct_b;
+
+    while(*struct_b){
+        printf("%d sayisinin target: %d current: %d\n",(*struct_b)->data,(*struct_b)->target_pos,(*struct_b)->current_pos);
+        (*struct_b)->_const = (*struct_b)->target_pos + (*struct_b)->current_pos;
+        (*struct_b) = (*struct_b)->next;
+    }
+    (*struct_b) = keep_b;
+
+    (void) struct_a;
 }
