@@ -8,7 +8,7 @@ void current_positions(t_struct **strc){
     int i;
 
     size = get_size_struct(strc);
-    printf("%d\n",size);
+    printf("SIZEEE :::: %d\n",size);
     keep = (*strc);
     i = 0;
     while(i < size){

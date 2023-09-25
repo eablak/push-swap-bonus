@@ -51,6 +51,21 @@ void sendB_second(t_struct **struct_a, t_struct **struct_b, int size){
 	}
 }
 
+void end_b(t_struct **strc,int size){
+	
+	int i = 0;
+	t_struct *keep;
+
+	keep = *(strc);
+	while(i < size - 1){
+		(*strc) = (*strc)->next;
+		printf("%d\n",i);
+		i++;
+	}
+	(*strc)->next = NULL;
+	*strc = keep;
+}
+
 void big_sort(t_struct **struct_a, int size){
     t_struct *struct_b;
     t_struct *keep_b;
@@ -61,6 +76,8 @@ void big_sort(t_struct **struct_a, int size){
 	sendB_second(struct_a,&struct_b,size);
 	if (!is_sorted(*struct_a))
 		little_sort(struct_a);
+	printf("SIZE: %d\n",size);
+	end_b(&struct_b,size);
 	keep_b = struct_b;
 
 	// while(struct_b){
