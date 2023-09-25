@@ -37,5 +37,6 @@ void	rra(t_struct **stack_a);
 void big_sort(t_struct **struct_a, int size);
 void	pb(t_struct **stack_a, t_struct **stack_b);
 t_struct	*get_last_before(t_struct *stack);
+int get_size_struct(t_struct **strc);
 
 #endif

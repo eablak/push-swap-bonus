@@ -14,7 +14,7 @@
     tüm değerleri a'ya at.
     a'da indeksleme işlemi yap
     en büyük 3 indekli değeri a da bırak diğerlerini b ye yolla(mantığı var)
-    mantık -> önce eleman sayısının yarısından küçükleri sonra 3 den büyük olana kadar kalanları yolla
+    mantık -> önce eleman sayısının yarısından küçükleri(index) sonra 3 den büyük olana kadar kalanları yolla
     a'da kalanaları kendi içinde sırala
     a ve b'dekilere pozisyon ataması yap
     b'dekilere hedef pozisyon ataması yap

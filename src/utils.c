@@ -12,6 +12,22 @@
 
 #include "../push_swap.h"
 
+int get_size_struct(t_struct **strc){
+	
+	int i;
+	t_struct *keep;
+
+	i = 0;
+	keep = *strc;
+	while((*strc)!= NULL)
+	{
+		(*strc) = (*strc)->next;
+		i++;
+	}
+	*strc = keep;
+	return(i);
+}
+
 t_struct	*get_last(t_struct *stack_a)
 {
 	while (stack_a && stack_a->next != NULL)
