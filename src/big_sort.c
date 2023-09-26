@@ -102,9 +102,14 @@ void big_sort(t_struct **struct_a, int size){
 	if (!is_sorted(*struct_a))
 		little_sort(struct_a);
 
-	current_positions(&struct_b);
-	target_positions(struct_a,&struct_b);
-	calculate_const(struct_a,&struct_b);
-	
+	while(struct_b){
+		current_positions(&struct_b);
+		target_positions(struct_a,&struct_b);
+		calculate_const(struct_a,&struct_b);
+		placement(struct_a,&struct_b);
+		printf("yeni a\n");
+		print_struct(struct_a);
+		getchar();
+	}
 
 }

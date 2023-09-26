@@ -57,6 +57,7 @@ SRCS        :=      src/main.c \
 					src/big_sort.c \
 					src/push.c \
 					src/positions.c \
+					src/placement.c \
 
                           
 OBJS        := $(SRCS:.c=.o)

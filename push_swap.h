@@ -23,6 +23,8 @@ typedef struct s_struct
     int current_pos;
     int target_pos;
     int _const;
+    int reverse_A;
+    int reverse_B;
     struct s_struct *next;
 } t_struct;
 
@@ -46,4 +48,10 @@ void current_positions(t_struct **strc);
 void target_positions(t_struct **struct_a,t_struct **struct_b);
 void calculate_const(t_struct **struct_a,t_struct **struct_b);
 int	is_sorted(t_struct *strc);
+void placement(t_struct **strct_a, t_struct **strct_b);
+void	rr(t_struct **stack_a, t_struct **stack_b);
+void	rrr(t_struct **stack_a, t_struct **stack_b);
+void	pa(t_struct **stack_a, t_struct **stack_b);
+void	rrb(t_struct **stack_b);
+void	rb(t_struct **stack_b);
 #endif

@@ -11,10 +11,14 @@ void current_positions(t_struct **strc){
     keep = (*strc);
     i = 0;
     while(i < size){
-        if (i <= (size / 2))
+        if (i <= (size / 2)){
             (*strc)->current_pos = i;
-        else
+            (*strc)->reverse_B = 0;
+        }
+        else{
             (*strc)->current_pos = size - i;
+            (*strc)->reverse_B = 1;
+        }
         (*strc) = (*strc)->next;
         i++;
     }
@@ -36,10 +40,14 @@ void target_positions(t_struct **struct_a,t_struct **struct_b){
         (*struct_a) = keep_a;
         while(*struct_a){
             if ((*struct_b)->data < (*struct_a)->data){
-                if (i < (get_size_struct(struct_a) / 2))
+                if (i < (get_size_struct(struct_a) / 2)){
                     (*struct_b)->target_pos = i;
-                else
+                    (*struct_b)->reverse_A = 0;
+                }
+                else{
                     (*struct_b)->target_pos = get_size_struct(struct_a) - i;
+                    (*struct_b)->reverse_A = 1;
+                }
                 break;
             }
             i++;
