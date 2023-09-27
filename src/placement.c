@@ -44,6 +44,6 @@ void placement(t_struct **strct_a, t_struct **strct_b){
         _rr(strct_a,strct_b);
     _ra(strct_a,strct_b);
     _rb(strct_a,strct_b);
-    printf("giden değer %d\n",(*strct_b)->data);
+    // printf("giden değer %d\n",(*strct_b)->data);
     pa(strct_a,strct_b);
 }
