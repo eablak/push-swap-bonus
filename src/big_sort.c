@@ -121,9 +121,11 @@ void big_sort(t_struct **struct_a, int size)
 		target_positions(struct_a, &struct_b);
 		calculate_const(struct_a, &struct_b);
 		placement(struct_a, &struct_b);
-		printf("\nA\n");
-		print_struct(struct_a);
-		printf("\nB\n");
-		print_struct(&struct_b);
 	}
+	print_struct(struct_a);
+
+	if (!is_sorted(*struct_a))
+		ascending(struct_a,size);
+	
+	// print_struct(struct_a);
 }

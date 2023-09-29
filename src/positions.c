@@ -25,66 +25,64 @@ void current_positions(t_struct **strc){
     (*strc) = keep;
 }
 
-int real_min(int value, t_struct **struct_a){
-    t_struct *keepA;
+void	position(t_struct **stack)
+{
+	t_struct	*tmp;
+	int		i;
 
-    keepA = (*struct_a);
-    while((*struct_a)){
-        printf("real_min value %d\t kıyaslandığı %d\n",value,(*struct_a)->data);
-        if (value > (*struct_a)->data){
-            (*struct_a) = keepA;
-            printf("realmin return 0\n");
-            return (0);
-        }
-        (*struct_a) = (*struct_a)->next;
-    }
-    (*struct_a) = keepA;
-    printf("realmin return 1\n");
-    return (1);
+	tmp = *stack;
+	i = 0;
+	while (tmp)
+	{
+		tmp->pos = i;
+		tmp = tmp->next;
+		i++;
+	}
 }
 
-//a da yerleşme maliyeti
-void target_positions(t_struct **struct_a,t_struct **struct_b){
+int	get_target(t_struct **stack_a, int b_indx, int target_indx, int target)
+{
+	t_struct	*tmp_a;
 
-    t_struct *keep_b;
-    t_struct *keep_a;
-    int i;
+	tmp_a = *stack_a;
+	while (tmp_a)
+	{
+		if (tmp_a->index > b_indx && tmp_a->index < target_indx)
+		{
+			target_indx = tmp_a->index;
+			target = tmp_a->pos;
+		}
+		tmp_a = tmp_a->next;
+	}
+	if (target_indx != 2147483647)
+		return (target);
+	tmp_a = *stack_a;
+	while (tmp_a)
+	{
+		if (tmp_a->index < target_indx)
+		{
+			target_indx = tmp_a->index;
+			target = tmp_a->pos;
+		}
+		tmp_a = tmp_a->next;
+	}
+	return (target);
+}
 
-    keep_b = *struct_b;
-    keep_a = *struct_a;
-    i = 0;
-    while(*struct_b){
-        i = 0;
-        (*struct_a) = keep_a;
-        while(*struct_a){
-            printf("b değeri %d kıyaslandığı a %d\n",(*struct_b)->data,(*struct_a)->data);
-            if ((*struct_b)->data < (*struct_a)->data){
-                printf("kucuk\n");
-                if (real_min((*struct_b)->data,&(*struct_a)->next),(*struct_a)->data){
-                    printf("real\n i değeri %d\n",i);
-                    if (i <= (get_size_struct(&keep_a) / 2)){
-                        (*struct_b)->target_pos = i;
-                        (*struct_b)->reverse_A = 0;
-                        printf("if'ten gidiyp target: %d\n",(*struct_b)->target_pos);
-                    }
-                    else{
-                        printf("a size %d\n",get_size_struct(&keep_a));
-                        (*struct_b)->target_pos = get_size_struct(&keep_a) - i - 1;
-                        printf("else'den gidiyp target: %d\n",(*struct_b)->target_pos);
-                        (*struct_b)->reverse_A = 1;
-                    }
-                    getchar();
-                    break;
-                }
-            }
-            i++;
-            (*struct_a) = (*struct_a)->next;
-       
-        }
-        (*struct_b) = (*struct_b)->next;
-    }
-    (*struct_b) = keep_b;
-    (*struct_a) = keep_a;
+void target_positions(t_struct **struct_a, t_struct **strct_b){
+    t_struct	*tmp_b;
+	int		target_pos;
+
+	tmp_b = *strct_b;
+	position(struct_a);
+	position(strct_b);
+	target_pos = 0;
+	while (tmp_b)
+	{
+		target_pos = get_target(struct_a, tmp_b->index, 2147483647, target_pos);
+		tmp_b->target_pos = target_pos;
+		tmp_b = tmp_b->next;
+	}
 }
 
 void calculate_const(t_struct **struct_a,t_struct **struct_b){

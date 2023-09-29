@@ -58,6 +58,7 @@ SRCS        :=      src/main.c \
 					src/push.c \
 					src/positions.c \
 					src/placement.c \
+					src/ascending.c \
 
                           
 OBJS        := $(SRCS:.c=.o)

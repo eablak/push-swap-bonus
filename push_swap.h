@@ -22,6 +22,7 @@ typedef struct s_struct
     int index;
     int current_pos;
     int target_pos;
+    int pos;
     int _const;
     int reverse_A;
     int reverse_B;
@@ -54,4 +55,5 @@ void	rrr(t_struct **stack_a, t_struct **stack_b);
 void	pa(t_struct **stack_a, t_struct **stack_b);
 void	rrb(t_struct **stack_b);
 void	rb(t_struct **stack_b);
+void ascending(t_struct **strct_a, int size);
 #endif

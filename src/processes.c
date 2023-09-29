@@ -26,6 +26,7 @@ t_struct *create_struct(int i)
 	new_struct->_const = 0;
 	new_struct->reverse_A = 0;
 	new_struct->reverse_B = 0;
+	new_struct->pos = 0;
 	new_struct->next = NULL;
 	return (new_struct);
 }
@@ -61,6 +62,7 @@ t_struct *build_struct(int *arr, int size)
 	struct_a->_const = 0;
 	struct_a->reverse_A = 0;
 	struct_a->reverse_B = 0;
+	struct_a->pos = 0;
 	struct_a->next = NULL;
 	i = 1;
 	while (i < size)
