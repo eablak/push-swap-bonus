@@ -90,7 +90,7 @@ void calculate_const(t_struct **struct_a,t_struct **struct_b){
     keep_b = *struct_b;
 
     while(*struct_b){
-        printf("%d sayisinin target: %d current: %d\n",(*struct_b)->data,(*struct_b)->target_pos,(*struct_b)->current_pos);
+        // printf("%d sayisinin target: %d current: %d\n",(*struct_b)->data,(*struct_b)->target_pos,(*struct_b)->current_pos);
         (*struct_b)->_const = (*struct_b)->target_pos + (*struct_b)->current_pos;
         (*struct_b) = (*struct_b)->next;
     }

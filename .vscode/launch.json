@@ -1,0 +1,18 @@
+{
+    // Olası öznitelikler hakkında bilgi edinmek için IntelliSense kullanın.
+    // Mevcut özniteliklerin açıklamalarını görüntülemek için üzerine gelin.
+    // Daha fazla bilgi için şu adresi ziyaret edin: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [{
+        "name": "(lldb) Başlat",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/push_swap",
+        "args": ["54 76 78  9 109  345 46 568 8 79 7 4 62 436 -45 37 6 -8 0 890  16 73 45 2 5"],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "lldb"
+    }]
+}

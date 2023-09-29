@@ -1,6 +1,6 @@
 NAME        := push_swap
 CC        := gcc
-FLAGS    := -Wall -Wextra -Werror 
+FLAGS    := -Wall -Wextra -Werror -g
 
 SRCS        :=      src/main.c \
  					libft/ft_tolower.c \

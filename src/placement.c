@@ -38,6 +38,8 @@ void _rb(t_struct **strct_a, t_struct **strct_b){
 
 void placement(t_struct **strct_a, t_struct **strct_b){
 
+    // if ((*strct_b)->move_for_min_const != 1)
+    //     return; 
     if ((*strct_b)->reverse_A == 1 && (*strct_b)->reverse_B == 1)
         _rrr(strct_a,strct_b);
     if ((*strct_b)->reverse_A == 0 && (*strct_b)->reverse_B == 0)

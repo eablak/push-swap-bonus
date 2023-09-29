@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:20:53 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 16:30:11 by eablak           ###   ########.fr       */
+/*   Updated: 2023/09/29 15:15:55 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_struct
     int _const;
     int reverse_A;
     int reverse_B;
+    int move_for_min_const;
     struct s_struct *next;
 } t_struct;
 
