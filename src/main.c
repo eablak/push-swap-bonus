@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:04:40 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 14:48:46 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 12:21:59 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,7 +118,7 @@ int	main(int ac, char **av)
 	arr = convert_digit(all_arguments, size);
 	check_sorted(arr, size);
 	check_same(arr, size);
-
+	//leak kontrol
     start_processes(arr,size);
 	
 	free(arr);

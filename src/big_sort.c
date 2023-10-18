@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/29 15:24:24 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 15:33:37 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,11 @@ int sendB_first(t_struct **struct_a, t_struct **struct_b, int size)
 	{
 		if ((*struct_a)->index < (size / 2))
 		{
-			// printf("b ye giden değer %d\n",(*struct_a)->data);
 			pb(struct_a, struct_b);
 			_pb++;
 		}
 		else
 		{
-			// printf("a da kalan değer %d\n",(*struct_a)->data);
 			if (first == 0)
 			{
 				_keepA = (*struct_a);
@@ -116,33 +114,6 @@ void clear_others(t_struct **strct_b, int data){
 	// printf("end\n");
 }
 
-void _who(t_struct **strct_b)
-{
-	t_struct *keepB;
-	int min;
-
-	keepB = (*strct_b);
-	min = 2147483647;
-	while ((*strct_b))
-	{
-		// printf("\n%d sayısı için const %d",(*strct_b)->data, (*strct_b)->_const);
-		if ((*strct_b)->_const < min){
-			min = (*strct_b)->_const;
-			(*strct_b)->move_for_min_const = 1;
-			clear_others(&keepB, (*strct_b)->data);
-			// printf("HERE %d\n",(*strct_b)->data);
-		}
-		(*strct_b) = (*strct_b)->next;
-	}	
-	(*strct_b) = keepB;
-	// while((*strct_b)){
-	// 	if ((*strct_b)->move_for_min_const == 1)
-	// 		printf("SEND %d\n",(*strct_b)->data);
-	// 	(*strct_b) = (*strct_b)->next;
-	// }
-	// (*strct_b) = keepB;
-}
-
 void big_sort(t_struct **struct_a, int size)
 {
 	t_struct *struct_b;
@@ -154,32 +125,17 @@ void big_sort(t_struct **struct_a, int size)
 	i = 0;
 	if (size > 6)
 		_pb = sendB_first(struct_a, &struct_b, size);	
-	// end_null(&struct_b, _pb);
 	sendB_second(struct_a, &struct_b, size);
 	if (!is_sorted(*struct_a))
 		little_sort(struct_a);
 	while (struct_b)
 	{
-		current_positions(&struct_b);
-		target_positions(struct_a, &struct_b);
-		calculate_const(struct_a, &struct_b);
-		_who(&struct_b);
-		if (struct_b->move_for_min_const == 1){
-			placement(struct_a, &struct_b);
-		}
-		else{
-			struct_b = struct_b->next;
-		}
-		// printf("A\n");
-		// print_struct(struct_a);
-		// printf("\nB\n");
-		// print_struct(&struct_b);
-		// getchar();
+		position_processes(struct_a,&struct_b);
+		get_const(struct_a,&struct_b);
+		placement(struct_a,&struct_b);
 	}
-
 	if (!is_sorted(*struct_a))
 		ascending(struct_a,size);
-
-	printf("A\n");
-		print_struct(struct_a);
+	// printf("A\n");
+	// 	print_struct(struct_a);
 }

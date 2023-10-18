@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:49:20 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/29 11:33:12 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 13:59:55 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ t_struct *create_struct(int i)
 	new_struct->reverse_B = 0;
 	new_struct->pos = 0;
 	new_struct->move_for_min_const = 0;
+	new_struct->cost_a = 0;
+	new_struct->cost_b = 0;
 	new_struct->next = NULL;
 	return (new_struct);
 }
@@ -64,6 +66,8 @@ t_struct *build_struct(int *arr, int size)
 	struct_a->reverse_A = 0;
 	struct_a->reverse_B = 0;
 	struct_a->pos = 0;
+	struct_a->cost_a = 0;
+	struct_a->cost_b = 0;
 	struct_a->move_for_min_const = 0;
 	struct_a->next = NULL;
 	i = 1;

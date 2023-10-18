@@ -59,6 +59,7 @@ SRCS        :=      src/main.c \
 					src/positions.c \
 					src/placement.c \
 					src/ascending.c \
+					src/position_processes.c \
 
                           
 OBJS        := $(SRCS:.c=.o)
