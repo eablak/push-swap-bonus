@@ -6,21 +6,9 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:04:40 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 12:21:59 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 16:47:56 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-    tüm değerleri a'ya at.
-    a'da indeksleme işlemi yap
-    en büyük 3 indekli değeri a da bırak diğerlerini b ye yolla(mantığı var)
-    mantık -> önce eleman sayısının yarısından küçükleri(index) sonra 3 den büyük olana kadar kalanları yolla
-    a'da kalanaları kendi içinde sırala
-    a ve b'dekilere pozisyon ataması yap
-    b'dekilere hedef pozisyon ataması yap
-    cost_a cost_b hesaplaması yap bunun maliyet hesabını yap en az olanı gönder
-    hepsi a'ya gittikten sonra a'daki en küçük indeksliyi en başa çek finito
-*/
 
 #include "../libft/libft.h"
 #include "../push_swap.h"
