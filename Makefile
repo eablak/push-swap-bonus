@@ -56,7 +56,6 @@ SRCS        :=      src/main.c \
 					src/reverse_rotate.c \
 					src/big_sort.c \
 					src/push.c \
-					src/positions.c \
 					src/placement.c \
 					src/ascending.c \
 					src/position_processes.c \
