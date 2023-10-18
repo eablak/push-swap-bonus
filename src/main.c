@@ -6,13 +6,13 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:04:40 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 16:47:56 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 16:49:37 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "../push_swap.h"
-
+ 
 int	get_size(char **av)
 {
 	int		i;
