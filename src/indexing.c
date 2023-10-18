@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:48:06 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 16:06:37 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 16:59:24 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,4 @@ void indexing(int *arr, int size, t_struct **struct_a)
         (*struct_a) = (*struct_a)->next;
     }
     (*struct_a) = keep;
-
-    // while((*struct_a) != NULL){
-    //     printf("DEĞER: %d IDNEX: %d\n",(*struct_a)->data, (*struct_a)->index);
-    //     (*struct_a) = (*struct_a)->next;
-    // }    
 }

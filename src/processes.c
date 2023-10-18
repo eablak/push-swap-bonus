@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:49:20 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 13:59:55 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 17:03:28 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,5 +89,15 @@ void start_processes(int *arr, int size)
 		return;
 	indexing(arr, size, &struct_a);
 	process_by_size(size, &struct_a);
-	// a yı freele
+}
+
+void free_struct(t_struct **strc, int size){
+	t_struct *keep;
+	while(size){
+		if ((*strc)->next != NULL)
+			keep = (*strc)->next;
+		free(*strc);
+		*strc = keep;
+		size--;
+	}
 }

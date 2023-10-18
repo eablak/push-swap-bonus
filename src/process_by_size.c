@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:18:01 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 16:21:00 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 17:01:59 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ void process_by_size(int size, t_struct **struct_a){
         little_sort(struct_a);
     else
         big_sort(struct_a, size);
-	//struct a nın tüm malloclarını freele
+	free_struct(struct_a,size);
 }
