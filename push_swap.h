@@ -6,12 +6,13 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:20:53 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 17:02:05 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 17:17:31 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 #define PUSH_SWAP_H
+
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -24,12 +25,6 @@ typedef struct s_struct
     int target_pos;
     int cost_a;
     int cost_b;
-
-    int current_pos;
-    int _const;
-    int reverse_A;
-    int reverse_B;
-    int move_for_min_const;
     struct s_struct *next;
 } t_struct;
 
@@ -61,7 +56,6 @@ void rrb(t_struct **stack_b);
 void rb(t_struct **stack_b);
 void ascending(t_struct **strct_a, int size);
 void position_processes(t_struct **struct_a, t_struct **struct_b);
-void	get_const(t_struct **stack_a, t_struct **stack_b);
+void get_const(t_struct **stack_a, t_struct **stack_b);
 void free_struct(t_struct **strc, int size);
-
 #endif

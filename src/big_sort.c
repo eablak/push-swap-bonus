@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 15:45:28 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/18 17:08:58 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,20 +99,20 @@ void print_struct(t_struct **strc)
 	(*strc) = keep;
 }
 
-void clear_others(t_struct **strct_b, int data){
-	t_struct *keepB;
+// void clear_others(t_struct **strct_b, int data){
+// 	t_struct *keepB;
 	
-	keepB = (*strct_b);
-	// printf("start\n");
-	while ((*strct_b))
-	{
-		if ((*strct_b)->data != data)
-			(*strct_b)->move_for_min_const = 0;
-		(*strct_b) = (*strct_b)->next;
-	}
-	(*strct_b) = keepB;
-	// printf("end\n");
-}
+// 	keepB = (*strct_b);
+// 	// printf("start\n");
+// 	while ((*strct_b))
+// 	{
+// 		if ((*strct_b)->data != data)
+// 			(*strct_b)->move_for_min_const = 0;
+// 		(*strct_b) = (*strct_b)->next;
+// 	}
+// 	(*strct_b) = keepB;
+// 	// printf("end\n");
+// }
 
 void big_sort(t_struct **struct_a, int size)
 {
