@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:15:47 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:05:10 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 13:41:00 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,21 +27,24 @@ void	rreverse(t_struct **stack)
 	b_tail->next = NULL;
 }
 
-void	rra(t_struct **stack_a)
+int	rra(t_struct **stack_a)
 {
 	rreverse(stack_a);
 	write(1, "rra\n", 4);
+	return (1);
 }
 
-void	rrb(t_struct **stack_b)
+int	rrb(t_struct **stack_b)
 {
 	rreverse(stack_b);
 	write(1, "rrb\n", 4);
+	return (1);
 }
 
-void	rrr(t_struct **stack_a, t_struct **stack_b)
+int	rrr(t_struct **stack_a, t_struct **stack_b)
 {
 	rreverse(stack_a);
 	rreverse(stack_b);
 	write(1, "rrr\n", 4);
+	return (1);
 }

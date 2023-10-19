@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 11:38:24 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:08:45 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 13:27:40 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,12 @@ int main(int ac, char **av)
 	all_arguments = unify(av);
 	check_nan(all_arguments);
 	arr = convert_digit(all_arguments, size);
-	check_sorted(arr, size);
-	check_same(arr, size);
-    start_processes(arr,size);
+	// check_sorted(arr, size);
+	// check_same(arr, size);
+    // start_processes(arr,size);
 	// system("leaks push_swap");
+
+	checker(arr,size);
+
 	free(arr);
 }

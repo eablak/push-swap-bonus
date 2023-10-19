@@ -6,12 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:09:18 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:05:12 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 13:52:00 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
-
 
 void	swap(t_struct **stack)
 {
@@ -26,21 +25,24 @@ void	swap(t_struct **stack)
 	(*stack)->next->index = _index;
 }
 
-void	sa(t_struct **stack_a)
+int	sa(t_struct **stack_a)
 {
 	swap(stack_a);
 	write(1, "sa\n", 3);
+	return (1);
 }
 
-void	sb(t_struct **stack_b)
+int	sb(t_struct **stack_b)
 {
 	swap(stack_b);
 	write(1, "sb\n", 3);
+	return (1);
 }
 
-void	ss(t_struct **stack_a, t_struct **stack_b)
+int	ss(t_struct **stack_a, t_struct **stack_b)
 {
 	swap(stack_a);
 	swap(stack_b);
 	write(1, "ss\n", 3);
+	return (1);
 }

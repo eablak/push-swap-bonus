@@ -124,6 +124,7 @@ BONUS_SRCS = 		libft/ft_tolower.c \
 					bonus/ascending_bonus.c \
 					bonus/position_processes_bonus.c \
 					bonus/pre_processes_bonus.c \
+					bonus/checker_bonus.c \
 					
 
                           
