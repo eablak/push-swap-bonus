@@ -6,12 +6,12 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:35:30 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 14:51:43 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:07:34 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	position(t_struct **stack)
 {

@@ -6,11 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:48:06 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 16:59:24 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:07:25 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	*bubble_sort(int *numeros, int size)
 {

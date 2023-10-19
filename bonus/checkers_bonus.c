@@ -6,11 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:46:09 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 11:38:36 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:04:44 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
 void	check_same(int *arr, int size)
 {

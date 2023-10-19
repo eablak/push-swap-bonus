@@ -6,11 +6,12 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:28:31 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 11:38:12 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:05:05 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
+
 
 void	_send(t_struct **stack1, t_struct **stack2)
 {

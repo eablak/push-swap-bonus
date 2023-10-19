@@ -6,12 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 11:29:24 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 11:38:19 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:05:23 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
 int	get_size(char **av)
 {

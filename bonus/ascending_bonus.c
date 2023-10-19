@@ -6,11 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:19:27 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 11:38:40 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:04:36 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
 void    do_ascending(t_struct **strct_a, int min_pos, int size)
 {

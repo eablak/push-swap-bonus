@@ -6,11 +6,12 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 11:38:24 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 11:38:25 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:08:45 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
+#include "../libft/libft.h"
 #include "stdio.h"
 
 int main(int ac, char **av)

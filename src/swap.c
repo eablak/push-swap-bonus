@@ -6,11 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:09:18 by eablak            #+#    #+#             */
-/*   Updated: 2023/09/23 16:09:56 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:07:51 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void	swap(t_struct **stack)
 {

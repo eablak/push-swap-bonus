@@ -6,13 +6,13 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:19:27 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 17:22:11 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:07:19 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-void    do_ascending(t_struct **strct_a, int min_pos, int size)
+void do_ascending(t_struct **strct_a, int min_pos, int size)
 {
     if (min_pos <= (size / 2))
     {

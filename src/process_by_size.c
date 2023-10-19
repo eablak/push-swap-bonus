@@ -6,11 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:18:01 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 17:01:59 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 12:07:39 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
 int	find_max(t_struct *stack)
 {

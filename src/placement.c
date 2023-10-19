@@ -1,4 +1,4 @@
-#include "../push_swap.h"
+#include "push_swap.h"
 
 void _rrr(t_struct **strct_a, t_struct **strct_b, int *cost_a, int *cost_b){
     while (*cost_a < 0 && *cost_b < 0)
