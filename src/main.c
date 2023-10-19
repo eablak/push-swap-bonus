@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:04:40 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:07:15 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:39:59 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int	main(int ac, char **av)
 	check_sorted(arr, size);
 	check_same(arr, size);
     start_processes(arr,size);
-	// system("leaks push_swap");
+	system("leaks push_swap");
 	free(arr);
 }
