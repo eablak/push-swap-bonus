@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:20:53 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 13:53:01 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:25:43 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,5 @@ t_struct			*build_struct(int *arr, int size);
 void				checker(int *arr, int size);
 int					sb(t_struct **stack_b);
 int					ss(t_struct **stack_a, t_struct **stack_b);
+void				last_control(t_struct **strct_a, int size);
 #endif

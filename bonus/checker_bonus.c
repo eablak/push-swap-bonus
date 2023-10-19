@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:56:11 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:12:13 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:25:12 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	checker(int *arr, int size)
 	{
 		str = get_next_line(0);
 		if (!str)
-			return ;
+			break ;
 		else if (checker_rotates(&struct_a, &struct_b, str))
 			i++;
 		else if (checker_swaps(&struct_a, &struct_b, str))
@@ -80,5 +80,5 @@ void	checker(int *arr, int size)
 		else if (checker_pushs(&struct_a, &struct_b, str))
 			i++;
 	}
-	//kontrol
+	last_control(&struct_a,size);
 }
