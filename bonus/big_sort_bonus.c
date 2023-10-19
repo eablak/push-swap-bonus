@@ -6,13 +6,13 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:42:25 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:50:51 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-int	sendB_first(t_struct **struct_a, t_struct **struct_b, int size)
+int	sendb_first(t_struct **struct_a, t_struct **struct_b, int size)
 {
 	t_struct	*_keepA;
 	int			i;
@@ -44,7 +44,7 @@ int	sendB_first(t_struct **struct_a, t_struct **struct_b, int size)
 	return (_pb++);
 }
 
-void	sendB_second(t_struct **struct_a, t_struct **struct_b, int size)
+void	send_second(t_struct **struct_a, t_struct **struct_b, int size)
 {
 	int	a_size;
 	int	i;
@@ -122,8 +122,8 @@ void	big_sort(t_struct **struct_a, int size)
 	_pb = 0;
 	i = 0;
 	if (size > 6)
-		_pb = sendB_first(struct_a, &struct_b, size);
-	sendB_second(struct_a, &struct_b, size);
+		_pb = sendb_first(struct_a, &struct_b, size);
+	send_second(struct_a, &struct_b, size);
 	if (!is_sorted(*struct_a))
 		little_sort(struct_a);
 	while (struct_b)
