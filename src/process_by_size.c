@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:18:01 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:07:39 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:44:02 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,13 @@ void	little_sort(t_struct **stack_a)
 		sa(stack_a);
 }
 
-
-void process_by_size(int size, t_struct **struct_a){
-
-    if (size == 2)
-        ra(struct_a);
-    else if (size == 3)
-        little_sort(struct_a);
-    else
-        big_sort(struct_a, size);
-	free_struct(struct_a,size);
+void	process_by_size(int size, t_struct **struct_a)
+{
+	if (size == 2)
+		ra(struct_a);
+	else if (size == 3)
+		little_sort(struct_a);
+	else
+		big_sort(struct_a, size);
+	free_struct(struct_a, size);
 }

@@ -6,17 +6,16 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:35:30 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:07:34 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:43:58 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
 void	position(t_struct **stack)
 {
 	t_struct	*tmp;
-	int		i;
+	int			i;
 
 	tmp = *stack;
 	i = 0;
@@ -31,10 +30,10 @@ void	position(t_struct **stack)
 int	get_target_pos(t_struct **stack_a, int b_indx, int target_indx)
 {
 	t_struct	*tmp_a;
-    int target;
+	int			target;
 
 	tmp_a = *stack_a;
-    target = 0;
+	target = 0;
 	while (tmp_a)
 	{
 		if (tmp_a->index > b_indx && tmp_a->index < target_indx)
@@ -59,31 +58,31 @@ int	get_target_pos(t_struct **stack_a, int b_indx, int target_indx)
 	return (target);
 }
 
-void position_processes(t_struct **struct_a, t_struct **struct_b){
-    
-    t_struct *tmp;
+void	position_processes(t_struct **struct_a, t_struct **struct_b)
+{
+	t_struct	*tmp;
 
-    tmp = *struct_b;
-    position(struct_a);
-    position(struct_b);
-    
-    while(tmp){
-        tmp->target_pos = get_target_pos(struct_a, tmp->index,2147483647);
-        tmp = tmp->next;
-    }
+	tmp = *struct_b;
+	position(struct_a);
+	position(struct_b);
+	while (tmp)
+	{
+		tmp->target_pos = get_target_pos(struct_a, tmp->index, 2147483647);
+		tmp = tmp->next;
+	}
 }
 
 void	get_const(t_struct **stack_a, t_struct **stack_b)
 {
 	t_struct	*tmp_b;
-	int		size_a;
-	int		size_b;
+	int			size_a;
+	int			size_b;
 
 	tmp_b = *stack_b;
 	size_a = get_size_struct(stack_a);
 	size_b = get_size_struct(stack_b);
 	while (tmp_b)
-	{ 
+	{
 		tmp_b->cost_b = tmp_b->pos;
 		if (tmp_b->pos > size_b / 2)
 			tmp_b->cost_b = (size_b - tmp_b->pos) * -1;

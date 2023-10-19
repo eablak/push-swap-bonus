@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:56:11 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:40:22 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:42:27 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	checker(int *arr, int size)
 			i++;
 		free(str);
 	}
-	last_control(&struct_a,size);
-	free_struct(&struct_a,size);
+	last_control(&struct_a, size);
+	free_struct(&struct_a, size);
 	system("leaks checker");
 }

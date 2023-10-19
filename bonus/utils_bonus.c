@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:43:41 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:05:19 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:43:21 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,20 @@ int	is_sorted(t_struct *strc)
 	return (1);
 }
 
-
-int get_size_struct(t_struct **strc){
-	
-	int i;
-	t_struct *keep;
+int	get_size_struct(t_struct **strc)
+{
+	int			i;
+	t_struct	*keep;
 
 	i = 0;
 	keep = *strc;
-	while((*strc)!= NULL)
+	while ((*strc) != NULL)
 	{
 		(*strc) = (*strc)->next;
 		i++;
 	}
 	*strc = keep;
-	return(i);
+	return (i);
 }
 
 t_struct	*get_last(t_struct *stack_a)

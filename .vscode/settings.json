@@ -5,6 +5,7 @@
         "push_swap_bonus.h": "c",
         "ios": "c",
         "istream": "c",
-        "ostream": "c"
+        "ostream": "c",
+        "get_next_line.h": "c"
     }
 }

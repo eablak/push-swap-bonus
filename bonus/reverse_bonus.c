@@ -6,12 +6,11 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:10:54 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 13:40:27 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:43:14 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
-
 
 void	reverse(t_struct **stack)
 {

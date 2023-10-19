@@ -6,19 +6,18 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 12:05:26 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 14:42:25 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
-int sendB_first(t_struct **struct_a, t_struct **struct_b, int size)
+int	sendB_first(t_struct **struct_a, t_struct **struct_b, int size)
 {
-
-	t_struct *_keepA;
-	int i;
-	int _pb;
-	int first;
+	t_struct	*_keepA;
+	int			i;
+	int			_pb;
+	int			first;
 
 	i = 0;
 	_pb = 0;
@@ -45,12 +44,11 @@ int sendB_first(t_struct **struct_a, t_struct **struct_b, int size)
 	return (_pb++);
 }
 
-void sendB_second(t_struct **struct_a, t_struct **struct_b, int size)
+void	sendB_second(t_struct **struct_a, t_struct **struct_b, int size)
 {
-
-	int a_size;
-	int i;
-	int j;
+	int	a_size;
+	int	i;
+	int	j;
 
 	a_size = get_size_struct(struct_a);
 	i = 0;
@@ -58,7 +56,7 @@ void sendB_second(t_struct **struct_a, t_struct **struct_b, int size)
 	while (i < a_size)
 	{
 		if (((*struct_a)->index == size || (*struct_a)->index == size - 1 ||
-			 (*struct_a)->index == size - 2) &&
+				(*struct_a)->index == size - 2) &&
 			j != 3)
 		{
 			ra(struct_a);
@@ -70,12 +68,12 @@ void sendB_second(t_struct **struct_a, t_struct **struct_b, int size)
 	}
 }
 
-void end_null(t_struct **strc, int size)
+void	end_null(t_struct **strc, int size)
 {
+	int			i;
+	t_struct	*keep;
 
-	int i = 0;
-	t_struct *keep;
-
+	i = 0;
 	keep = *(strc);
 	while (i < size - 1)
 	{
@@ -86,9 +84,9 @@ void end_null(t_struct **strc, int size)
 	*strc = keep;
 }
 
-void print_struct(t_struct **strc)
+void	print_struct(t_struct **strc)
 {
-	t_struct *keep;
+	t_struct	*keep;
 
 	keep = *strc;
 	while (*strc)
@@ -101,7 +99,7 @@ void print_struct(t_struct **strc)
 
 // void clear_others(t_struct **strct_b, int data){
 // 	t_struct *keepB;
-	
+
 // 	keepB = (*strct_b);
 // 	// printf("start\n");
 // 	while ((*strct_b))
@@ -114,28 +112,28 @@ void print_struct(t_struct **strc)
 // 	// printf("end\n");
 // }
 
-void big_sort(t_struct **struct_a, int size)
+void	big_sort(t_struct **struct_a, int size)
 {
-	t_struct *struct_b;
-	int _pb;
-	int i;
+	t_struct	*struct_b;
+	int			_pb;
+	int			i;
 
 	struct_b = NULL;
 	_pb = 0;
 	i = 0;
 	if (size > 6)
-		_pb = sendB_first(struct_a, &struct_b, size);	
+		_pb = sendB_first(struct_a, &struct_b, size);
 	sendB_second(struct_a, &struct_b, size);
 	if (!is_sorted(*struct_a))
 		little_sort(struct_a);
 	while (struct_b)
 	{
-		position_processes(struct_a,&struct_b);
-		get_const(struct_a,&struct_b);
-		placement(struct_a,&struct_b);
+		position_processes(struct_a, &struct_b);
+		get_const(struct_a, &struct_b);
+		placement(struct_a, &struct_b);
 	}
 	if (!is_sorted(*struct_a))
-		ascending(struct_a,size);
+		ascending(struct_a, size);
 	// printf("A\n");
 	// 	print_struct(struct_a);
 }
