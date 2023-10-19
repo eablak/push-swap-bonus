@@ -62,6 +62,7 @@ SRCS        :=      src/main.c \
 					src/placement.c \
 					src/ascending.c \
 					src/position_processes.c \
+					src/pre_processes.c \
 
 BONUS_SRCS = 		libft/ft_tolower.c \
 					libft/ft_substr.c \
@@ -109,10 +110,25 @@ BONUS_SRCS = 		libft/ft_tolower.c \
 					get_next_line/get_next_line.c \
 					get_next_line/get_next_line_utils.c \
 					bonus/main_bonus.c \
+					bonus/utils_bonus.c \
+					bonus/checkers_bonus.c \
+					bonus/processes_bonus.c \
+					bonus/process_by_size_bonus.c \
+					bonus/indexing_bonus.c \
+					bonus/swap_bonus.c \
+					bonus/reverse_bonus.c \
+					bonus/reverse_rotate_bonus.c \
+					bonus/big_sort_bonus.c \
+					bonus/push_bonus.c \
+					bonus/placement_bonus.c \
+					bonus/ascending_bonus.c \
+					bonus/position_processes_bonus.c \
+					bonus/pre_processes_bonus.c \
 					
 
                           
 OBJS        := $(SRCS:.c=.o)
+C_OBJS        := $(BONUS_SRCS:.c=.o)
 
 .c.o:
 	${CC} ${FLAGS} -c $< -o ${<:.c=.o}
@@ -134,9 +150,10 @@ all:		${NAME}
 
 bonus:		$(BONUS)
 
-$(BONUS): $(BONUS_SRCS)
-	@$(CC) $(CFLAGS) $(BONUS_SRCS) $(LIBFT) -o $(BONUS)
-	@echo "checker created"
+${BONUS}:	${C_OBJS}
+			@echo "$(GREEN)Compilation ${CLR_RMV}of ${YELLOW}$(BONUS) ${CLR_RMV}..."
+			${CC} ${FLAGS} -o ${BONUS} ${C_OBJS}
+			@echo "$(GREEN)$(BONUS) created[0m ✔️"
 
 clean:
 			@ ${RM} *.o */*.o */*/*.o

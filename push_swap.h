@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:20:53 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/18 17:17:31 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/19 11:27:07 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,7 @@ void ascending(t_struct **strct_a, int size);
 void position_processes(t_struct **struct_a, t_struct **struct_b);
 void get_const(t_struct **stack_a, t_struct **stack_b);
 void free_struct(t_struct **strc, int size);
+int	get_size(char **av);
+char	*unify(char **av);
+int	*convert_digit(char *str, int size);
 #endif
