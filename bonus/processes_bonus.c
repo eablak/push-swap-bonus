@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:49:20 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 18:01:33 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 18:26:13 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,10 @@ void	free_struct(t_struct **strc, int size)
 		// 	return ;
 		if ((*strc)->next != NULL)
 			keep = (*strc)->next;
-		if ((*strc) == NULL)
-			break;
+		else{
 		free(*strc);
+			break;
+		}
 		*strc = keep;
 		size--;
 		old = (*strc)->data;

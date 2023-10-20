@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:56:11 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 18:01:15 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 18:28:24 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,8 +114,8 @@ void	checker(int *arr, int size)
 	last_control(&struct_a, size);
 	free_struct(&struct_a, size);
 	free_struct(&struct_b,size);
-	printf("A\n");
-	print_strct(&struct_a);
-	printf("B\n");
-	print_strct(&struct_b);
+	// printf("A\n");
+	// print_strct(&struct_a);
+	// printf("B\n");
+	// print_strct(&struct_b);
 }
