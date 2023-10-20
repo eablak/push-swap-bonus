@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 17:01:05 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 19:05:44 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@ int	sendb_first(t_struct **struct_a, t_struct **struct_b, int size)
 	return (_pb++);
 }
 
-void	send_second(t_struct **struct_a, t_struct **struct_b, int size, int *_pb)
+void	send_second(t_struct **struct_a, t_struct **struct_b, int size,
+		int *_pb)
 {
 	int	a_size;
 	int	i;
@@ -64,7 +65,8 @@ void	send_second(t_struct **struct_a, t_struct **struct_b, int size, int *_pb)
 			ra(struct_a);
 			j++;
 		}
-		else{
+		else
+		{
 			pb(struct_a, struct_b);
 			(*_pb)++;
 		}
@@ -81,10 +83,11 @@ void	endb(t_struct **strc, int size)
 	kp = (*strc);
 	while (i < size)
 	{
-		printf("!!%d\n",(*strc)->data);
-		if (i == size - 1){
+		printf("!!%d\n", (*strc)->data);
+		if (i == size - 1)
+		{
 			(*strc)->next = NULL;
-			break;
+			break ;
 		}
 		(*strc) = (*strc)->next;
 		i++;

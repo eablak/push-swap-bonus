@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:20:53 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 17:44:08 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 19:10:42 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int					pa(t_struct **stack_a, t_struct **stack_b);
 int					rrb(t_struct **stack_b);
 int					rb(t_struct **stack_b);
 void				ascending(t_struct **strct_a, int size);
-void	position_processes(t_struct **struct_a,
+void				position_processes(t_struct **struct_a,
 						t_struct **struct_b);
 void				get_const(t_struct **stack_a, t_struct **stack_b);
 void				free_struct(t_struct **strc, int size);
@@ -75,5 +75,6 @@ void				_rr(t_struct **strct_a, t_struct **strct_b, int *cost_a,
 						int *cost_b);
 void				_ra(t_struct **strct_a, t_struct **strct_b, int *cost);
 void				_rb(t_struct **strct_a, t_struct **strct_b, int *cost);
-void				print_strct(t_struct **strct);
+void				last_processes(t_struct **struct_a, t_struct **struct_b,
+						int size);
 #endif

@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:43:41 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 17:48:24 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 19:08:35 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ t_struct	*get_last(t_struct *stack_a)
 	while (stack_a && stack_a->next != NULL)
 	{
 		stack_a = stack_a->next;
-		
 	}
 	return (stack_a);
 }

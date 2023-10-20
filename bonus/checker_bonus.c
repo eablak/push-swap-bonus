@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:56:11 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 18:28:24 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 19:10:54 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	checker_rotates(t_struct **struct_a, t_struct **struct_b, char *str)
 	int	i;
 
 	i = 0;
-	
 	if (ft_strncmp(str, "rrr", 3) == 0)
 		i = rrr(struct_a, struct_b);
 	else if (ft_strncmp(str, "rra", 3) == 0)
@@ -59,25 +58,12 @@ int	checker_pushs(t_struct **struct_a, t_struct **struct_b, char *str)
 	return (i);
 }
 
-void print_error(t_struct **struct_a,int size)
+void	print_error(t_struct **struct_a, int size)
 {
-	write(1, "Error",5);
-	free_struct(struct_a,size);
+	write(1, "Error", 5);
+	free_struct(struct_a, size);
 	exit(1);
 }
-
-void print_strct(t_struct **strct){
-	t_struct	*kp;
-
-	kp = (*strct);
-	while ((*strct))
-	{
-		printf("%d\n",(*strct)->data);
-		(*strct) = (*strct)->next;
-	}
-	(*strct) = kp;
-}
-
 
 void	checker(int *arr, int size)
 {
@@ -90,8 +76,6 @@ void	checker(int *arr, int size)
 	struct_b = NULL;
 	str = "";
 	i = 0;
-	// print_strct(&struct_a);
-	// printf("!!!!\n");
 	while (str != NULL)
 	{
 		str = get_next_line(0);
@@ -104,18 +88,8 @@ void	checker(int *arr, int size)
 		else if (checker_pushs(&struct_a, &struct_b, str))
 			i++;
 		else
-			print_error(&struct_a,size);
-		// printf("A\n");
-		// print_strct(&struct_a);
-		// printf("B\n");
-		// print_strct(&struct_b);
+			print_error(&struct_a, size);
 		free(str);
 	}
-	last_control(&struct_a, size);
-	free_struct(&struct_a, size);
-	free_struct(&struct_b,size);
-	// printf("A\n");
-	// print_strct(&struct_a);
-	// printf("B\n");
-	// print_strct(&struct_b);
+	last_processes(&struct_a, &struct_b, size);
 }
