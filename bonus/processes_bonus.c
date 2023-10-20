@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:49:20 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 12:05:52 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 18:01:33 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ t_struct	*build_struct(int *arr, int size)
 		struct_addback(&struct_a, created_struct);
 		i++;
 	}
+	// struct_a->next = NULL;
 	struct_a = begin;
 	return (struct_a);
 }
@@ -85,13 +86,19 @@ void	start_processes(int *arr, int size)
 void	free_struct(t_struct **strc, int size)
 {
 	t_struct	*keep;
+	int old;
 
-	while (size)
+	while ((*strc))
 	{
+		// if ((*strc)->data == old)
+		// 	return ;
 		if ((*strc)->next != NULL)
 			keep = (*strc)->next;
+		if ((*strc) == NULL)
+			break;
 		free(*strc);
 		*strc = keep;
 		size--;
+		old = (*strc)->data;
 	}
 }

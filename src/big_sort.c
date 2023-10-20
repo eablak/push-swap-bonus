@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 11:47:34 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 17:16:20 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	sendb_first(t_struct **struct_a, t_struct **struct_b, int size)
 	return (_pb++);
 }
 
-void	send_second(t_struct **struct_a, t_struct **struct_b, int size)
+void	send_second(t_struct **struct_a, t_struct **struct_b, int size, int *_pb)
 {
 	int	a_size;
 	int	i;
@@ -64,10 +64,43 @@ void	send_second(t_struct **struct_a, t_struct **struct_b, int size)
 			ra(struct_a);
 			j++;
 		}
-		else
+		else{
 			pb(struct_a, struct_b);
+			(*_pb)++;
+		}
 		i++;
 	}
+}
+
+void	endb(t_struct **strc, int size)
+{
+	t_struct	*kp;
+	int			i;
+
+	i = 0;
+	kp = (*strc);
+	while (i < size)
+	{
+		if (i == size - 1){
+			(*strc)->next = NULL;
+			break;
+		}
+		(*strc) = (*strc)->next;
+		i++;
+	}
+	(*strc) = kp;
+}
+
+void print_strct(t_struct **strct){
+	t_struct	*kp;
+
+	kp = (*strct);
+	while ((*strct))
+	{
+		printf("%d\n",(*strct)->data);
+		(*strct) = (*strct)->next;
+	}
+	(*strct) = kp;
 }
 
 void	big_sort(t_struct **struct_a, int size)
@@ -81,7 +114,13 @@ void	big_sort(t_struct **struct_a, int size)
 	i = 0;
 	if (size > 6)
 		_pb = sendb_first(struct_a, &struct_b, size);
-	send_second(struct_a, &struct_b, size);
+	send_second(struct_a, &struct_b, size, &_pb);
+	endb(&struct_b, _pb);
+	// printf("A\n");
+	// print_strct(struct_a);
+	// printf("B\n");
+	// print_strct(&struct_b);
+	// getchar();
 	if (!is_sorted(*struct_a))
 		little_sort(struct_a);
 	while (struct_b)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eablak <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:10:55 by eablak            #+#    #+#             */
-/*   Updated: 2022/10/16 10:12:17 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 17:10:29 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 	i = 0;
 	j = 0;
 	kelime_sayisi = ft_kelimesayisi(s, c);
-	split = (char **)malloc(sizeof(char *) * kelime_sayisi + 1);
+	split = (char **)malloc(sizeof(char *) * (kelime_sayisi + 1));
 	if (!split)
 		return (0);
 	while (s[i])

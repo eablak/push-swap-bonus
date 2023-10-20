@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:46:09 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:43:35 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 16:27:14 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ void	check_nan(char *all_arguments)
 		if (!(all_arguments[i] >= 48 && all_arguments[i] <= 57)
 			&& all_arguments[i] != '-' && all_arguments[i] != ' ')
 		{
+			printf("%c",all_arguments[i]);
 			write(2, "Error\n", 6);
 			free(all_arguments);
 			exit(1);

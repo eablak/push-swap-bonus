@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:15:47 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:43:16 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 17:19:34 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	rreverse(t_struct **stack)
 	t_struct	*tail;
 	t_struct	*b_tail;
 
+	if (stack == NULL)
+		return ;
 	tail = get_last(*stack);
 	b_tail = get_last_before(*stack);
 	tmp = (*stack);
