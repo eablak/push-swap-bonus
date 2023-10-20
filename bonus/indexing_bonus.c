@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 15:48:06 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:42:38 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 12:02:51 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,11 @@ int	*bubble_sort(int *numeros, int size)
 
 void	indexing(int *arr, int size, t_struct **struct_a)
 {
+	t_struct	*keep;
+	int			i;
+
 	bubble_sort(arr, size);
-	t_struct *keep;
-
 	keep = (*struct_a);
-	int i;
-
 	i = 0;
 	while ((*struct_a) != NULL)
 	{

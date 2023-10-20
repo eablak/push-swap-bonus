@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:19:27 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:42:22 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 12:00:37 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ void	do_ascending(t_struct **strct_a, int min_pos, int size)
 
 void	ascending(t_struct **strct_a, int size)
 {
-	int min;
-	int i;
-	int min_pos;
-	t_struct *keep_a;
+	int			min;
+	int			i;
+	int			min_pos;
+	t_struct	*keep_a;
 
 	min = 2147483647;
 	min_pos = 0;

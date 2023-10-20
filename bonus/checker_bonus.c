@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 12:56:11 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:42:27 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 12:01:43 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,10 +60,10 @@ int	checker_pushs(t_struct **struct_a, t_struct **struct_b, char *str)
 
 void	checker(int *arr, int size)
 {
-	t_struct *struct_a;
-	t_struct *struct_b;
-	char *str;
-	int i;
+	t_struct	*struct_a;
+	t_struct	*struct_b;
+	char		*str;
+	int			i;
 
 	struct_a = build_struct(arr, size);
 	str = "";

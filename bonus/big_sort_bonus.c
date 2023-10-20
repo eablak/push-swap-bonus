@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/20 11:47:46 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 12:01:13 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,8 @@ void	send_second(t_struct **struct_a, t_struct **struct_b, int size)
 	j = 0;
 	while (i < a_size)
 	{
-		if (((*struct_a)->index == size || (*struct_a)->index == size - 1 ||
-				(*struct_a)->index == size - 2) &&
-			j != 3)
+		if (((*struct_a)->index == size || (*struct_a)->index == size - 1
+				|| (*struct_a)->index == size - 2) && j != 3)
 		{
 			ra(struct_a);
 			j++;
