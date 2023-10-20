@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:20:53 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:44:07 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 11:58:14 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,4 +62,10 @@ void				free_struct(t_struct **strc, int size);
 int					get_size(char **av);
 char				*unify(char **av);
 int					*convert_digit(char *str, int size);
+void				_rrr(t_struct **strct_a, t_struct **strct_b, int *cost_a,
+						int *cost_b);
+void				_rr(t_struct **strct_a, t_struct **strct_b, int *cost_a,
+						int *cost_b);
+void				_ra(t_struct **strct_a, t_struct **strct_b, int *cost);
+void				_rb(t_struct **strct_a, t_struct **strct_b, int *cost);
 #endif

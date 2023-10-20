@@ -6,15 +6,21 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:50:51 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 11:47:46 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
+void	sendb_first_else(t_struct **struct_a, int *first, t_struct **keep_a)
+{
+	*keep_a = (*struct_a);
+	(*first) = 1;
+}
+
 int	sendb_first(t_struct **struct_a, t_struct **struct_b, int size)
 {
-	t_struct	*_keepA;
+	t_struct	*keep_a;
 	int			i;
 	int			_pb;
 	int			first;
@@ -32,15 +38,12 @@ int	sendb_first(t_struct **struct_a, t_struct **struct_b, int size)
 		else
 		{
 			if (first == 0)
-			{
-				_keepA = (*struct_a);
-				first = 1;
-			}
+				sendb_first_else(struct_a, &first, &keep_a);
 			ra(struct_a);
 		}
 		i++;
 	}
-	(*struct_a) = _keepA;
+	(*struct_a) = keep_a;
 	return (_pb++);
 }
 
@@ -68,50 +71,6 @@ void	send_second(t_struct **struct_a, t_struct **struct_b, int size)
 	}
 }
 
-void	end_null(t_struct **strc, int size)
-{
-	int			i;
-	t_struct	*keep;
-
-	i = 0;
-	keep = *(strc);
-	while (i < size - 1)
-	{
-		(*strc) = (*strc)->next;
-		i++;
-	}
-	(*strc)->next = NULL;
-	*strc = keep;
-}
-
-void	print_struct(t_struct **strc)
-{
-	t_struct	*keep;
-
-	keep = *strc;
-	while (*strc)
-	{
-		printf("%d\n", (*strc)->data);
-		(*strc) = (*strc)->next;
-	}
-	(*strc) = keep;
-}
-
-// void clear_others(t_struct **strct_b, int data){
-// 	t_struct *keepB;
-
-// 	keepB = (*strct_b);
-// 	// printf("start\n");
-// 	while ((*strct_b))
-// 	{
-// 		if ((*strct_b)->data != data)
-// 			(*strct_b)->move_for_min_const = 0;
-// 		(*strct_b) = (*strct_b)->next;
-// 	}
-// 	(*strct_b) = keepB;
-// 	// printf("end\n");
-// }
-
 void	big_sort(t_struct **struct_a, int size)
 {
 	t_struct	*struct_b;
@@ -134,6 +93,4 @@ void	big_sort(t_struct **struct_a, int size)
 	}
 	if (!is_sorted(*struct_a))
 		ascending(struct_a, size);
-	// printf("A\n");
-	// 	print_struct(struct_a);
 }

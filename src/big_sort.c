@@ -6,11 +6,17 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 16:21:08 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:52:24 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 11:47:34 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sendb_first_else(t_struct **struct_a, int *first, t_struct **keep_a)
+{
+	*keep_a = (*struct_a);
+	(*first) = 1;
+}
 
 int	sendb_first(t_struct **struct_a, t_struct **struct_b, int size)
 {
@@ -32,10 +38,7 @@ int	sendb_first(t_struct **struct_a, t_struct **struct_b, int size)
 		else
 		{
 			if (first == 0)
-			{
-				keep_a = (*struct_a);
-				first = 1;
-			}
+				sendb_first_else(struct_a, &first, &keep_a);
 			ra(struct_a);
 		}
 		i++;
@@ -65,35 +68,6 @@ void	send_second(t_struct **struct_a, t_struct **struct_b, int size)
 			pb(struct_a, struct_b);
 		i++;
 	}
-}
-
-void	end_null(t_struct **strc, int size)
-{
-	int			i;
-	t_struct	*keep;
-
-	i = 0;
-	keep = *(strc);
-	while (i < size - 1)
-	{
-		(*strc) = (*strc)->next;
-		i++;
-	}
-	(*strc)->next = NULL;
-	*strc = keep;
-}
-
-void	print_struct(t_struct **strc)
-{
-	t_struct	*keep;
-
-	keep = *strc;
-	while (*strc)
-	{
-		printf("%d\n", (*strc)->data);
-		(*strc) = (*strc)->next;
-	}
-	(*strc) = keep;
 }
 
 void	big_sort(t_struct **struct_a, int size)

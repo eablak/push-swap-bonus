@@ -6,7 +6,7 @@
 /*   By: eablak <eablak@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 13:35:30 by eablak            #+#    #+#             */
-/*   Updated: 2023/10/19 14:42:55 by eablak           ###   ########.fr       */
+/*   Updated: 2023/10/20 11:56:53 by eablak           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,19 @@ void	position(t_struct **stack)
 		tmp->pos = i;
 		tmp = tmp->next;
 		i++;
+	}
+}
+
+void	get_target_pos_utils(t_struct **tmp_a, int *target, int *target_indx)
+{
+	while ((*tmp_a))
+	{
+		if ((*tmp_a)->index < *target_indx)
+		{
+			*target_indx = (*tmp_a)->index;
+			*target = (*tmp_a)->pos;
+		}
+		(*tmp_a) = (*tmp_a)->next;
 	}
 }
 
@@ -46,15 +59,7 @@ int	get_target_pos(t_struct **stack_a, int b_indx, int target_indx)
 	if (target_indx != 2147483647)
 		return (target);
 	tmp_a = *stack_a;
-	while (tmp_a)
-	{
-		if (tmp_a->index < target_indx)
-		{
-			target_indx = tmp_a->index;
-			target = tmp_a->pos;
-		}
-		tmp_a = tmp_a->next;
-	}
+	get_target_pos_utils(&tmp_a, &target, &target_indx);
 	return (target);
 }
 

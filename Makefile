@@ -63,6 +63,7 @@ SRCS        :=      src/main.c \
 					src/ascending.c \
 					src/position_processes.c \
 					src/pre_processes.c \
+					src/rotates.c \
 
 BONUS_SRCS = 		libft/ft_tolower.c \
 					libft/ft_substr.c \
